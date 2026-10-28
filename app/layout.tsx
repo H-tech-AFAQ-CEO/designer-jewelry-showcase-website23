@@ -1,6 +1,10 @@
 import { Analytics } from '@vercel/analytics/next'
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+
+const displayFont = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-display', weight: ['400', '500', '600'], style: ['normal', 'italic'], display: 'swap' })
+const sansFont = DM_Sans({ subsets: ['latin'], variable: '--font-sans', weight: ['400', '500', '600'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: 'Atelier North — Objects with intention',
@@ -40,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${displayFont.variable} ${sansFont.variable} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
