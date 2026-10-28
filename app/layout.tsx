@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Atelier North — Objects with intention',
-  description: 'Quietly considered jewellery, bespoke watches, and leather straps made by hand in London.',
+  description: 'A four-part editorial home for quietly considered jewellery, bespoke watches, and leather straps made by hand in London.',
   generator: 'v0.app',
   icons: {
     icon: [

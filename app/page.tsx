@@ -18,9 +18,10 @@ export default function Page() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Atelier North home">ATELIER <span>NORTH</span></a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
-          <a href="#gallery" onClick={() => setMenuOpen(false)}>Collection</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>The atelier</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="/collection" onClick={() => setMenuOpen(false)}>Collection</a>
+          <a href="/atelier" onClick={() => setMenuOpen(false)}>The atelier</a>
+          <a href="/journal" onClick={() => setMenuOpen(false)}>Journal</a>
+          <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
         <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
